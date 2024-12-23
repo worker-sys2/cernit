@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machakos CEO's Networking Forum</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Favicon Link -->
+    <link rel="icon" href="{{ url_for('static', filename='images/meicon.png') }}" type="image/png">
+
+    
+
+    <script defer src="/static/js/script.js"></script>
+</head>
+<body class="bg-gradient-to-br from-[#5f2c82] via-[#7a4d99] to-[#49a09d] text-white font-sans">
+
+    <header class="text-center py-2 w-full opacity-90" style="background: linear-gradient(90deg, #0A1B22, #153845); height: 150px;">
+        <img src="{{ url_for('static', filename='images/ceologo.png') }}" alt="Forum Logo" class="mx-auto transition-transform transform hover:scale-110" style="width: 150px; height: 150px;">
+    </header>
+
+    <!-- Navigation Bar -->
+   <nav class="bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center">
+            <!-- Logo stays centered in header, links align right -->
+            <div class="ml-auto space-x-6 text-black text-lg">
+                    <a href="#home" class="hover:text-yellow-500 hover:scale-500 hover:underline transition duration-300">Home</a>
+                    <a href="#about" class="hover:text-yellow-500 hover:scale-200 hover:underline transition duration-300">Login</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <main class="container mx-auto py-8 bg-[#F1F1F1] px-4">
+
+    <section 
+        class="relative mt-1 flex items-center justify-center bg-cover bg-center" 
+        style="background-image: url('{{ url_for('static', filename='images/imageceo3.jpg') }}'); height: 500px; margin-top: -20px;">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+
+        <!-- Content -->
+        <div class="max-w-[600px] mx-auto text-center relative z-10 flex flex-col items-center justify-center space-y-6">
+
+            <!-- Subheading -->
+           <div class="bg-black p-4 bg-opacity-40">
+    <p 
+        class="text-sm sm:text-lg lg:text-xl text-gray-300 sm:mx-[5px] mx-0" 
+        style="text-shadow: 0 0 10px gold, 0 0 20px black, 2px 2px 5px gold;"
+    >
+        Are you ready to connect, collaborate, and create a legacy of success?
+    </p>
+</div>
+
+
+            
+             <!-- Heading -->
+         <h2 
+    id="magnified-heading" 
+    class="text-3xl sm:text-2xl lg:text-3xl font-extrabold text-white leading-tight group" 
+    style="text-shadow: 0 0 10px gold, 0 0 20px black, 2px 2px 5px black;"
+>
+    Welcome to Machakos CEO's Networking Forum
+</h2>
+
+
+            <script>
+            const text = "Welcome to Machakos CEO's Networking Forum";
+            let i = 0;
+            let j = 0;
+            let currentText = "";
+            let isDeleting = false;
+
+            function type() {
+              if (isDeleting) {
+                document.getElementById("magnified-heading").textContent = text.substring(0, j-1);
+                j--;
+                if (j == 0) {
+                  isDeleting = false;
+                }
+              } else {
+                document.getElementById("magnified-heading").textContent = text.substring(0, j+1);
+                j++;
+                if (j == text.length) {
+                  isDeleting = true;
+                }
+              }
+              setTimeout(type, 150);
+            }
+
+            type();
+            </script>
+
+
+
+
+           
+
+            <!-- Call-to-action Button -->
+            <!-- Call-to-action Button -->
+            <a 
+              href="/ceoform" 
+              class="px-6 py-3 bg-white text-black font-bold rounded-md transform hover:scale-105 transition duration-300"
+            >
+              Join Now
+            </a>
+
+        </div>
+    </section>
+        <div>i</div>
+
+       <section class="py-16 text-white" style="background: linear-gradient(90deg, #0A1B22, #153845);">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-2xl md:text-2xl font-extrabold mb-8 text-center">
+      <i class="fas fa-users mr-2 text-cyan-400"></i> Who We Are
+    </h2>
+    <p class="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-center">
+      The Machakos CEO's Networking Forum is an exclusive community of visionary leaders, innovators, and entrepreneurs committed to driving business excellence and regional growth.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="p-6 bg-opacity-80 bg-gray-500 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+        <i class="fas fa-lightbulb text-4xl text-yellow-400 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Visionary Leaders</h3>
+        <p>
+          Connect with forward-thinking individuals driving innovation and change in their respective industries.
+        </p>
+      </div>
+      <div class="p-6 bg-opacity-80 bg-gray-500 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+        <i class="fas fa-rocket text-4xl text-red-400 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Business Growth</h3>
+        <p>
+          Access opportunities and insights to scale your business and achieve unparalleled success.
+        </p>
+      </div>
+      <div class="p-6 bg-opacity-80 bg-gray-500 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl">
+        <i class="fas fa-network-wired text-4xl text-green-400 mb-4"></i>
+        <h3 class="text-2xl font-bold mb-2">Enduring Connections</h3>
+        <p>
+          Build a strong network of like-minded professionals and foster long-lasting relationships.
+        </p>
+      </div>
+    </div>
+    <p class="text-lg md:text-xl mt-12 max-w-3xl mx-auto text-center">
+      Whether you’re scaling your business, seeking innovative solutions, or looking to build a network of like-minded professionals, the Machakos CEO's Networking Forum is your gateway to a brighter, bolder future.
+    </p>
+  </div>
+</section>
+
+
+
+
+   <section class="py-12 bg-black bg-opacity-70">
+    <div class="max-w-7xl mx-auto">
+        <h3 class="text-2xl font-bold text-center mb-10 text-white">Why Join Us?</h3>
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 px-4">
+            <!-- Card 1 -->
+            <div class="bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg p-6 transform hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
+                <span class="text-red-500 text-4xl mb-4 block">&#x1F91D;</span>
+                <h4 class="text-xl font-bold text-white mb-2">Build Powerful Connections</h4>
+                <p class="text-gray-300">
+                    Rub shoulders with a diverse and dynamic group of CEOs and entrepreneurs who share your drive for success.
+                </p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg p-6 transform hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
+                <span class="text-purple-500 text-4xl mb-4 block">&#x1F393;</span>
+                <h4 class="text-xl font-bold text-white mb-2">Sharpen Your Leadership Skills</h4>
+                <p class="text-gray-300">
+                    Gain access to exclusive events featuring seasoned industry leaders, business strategists, and subject matter experts.
+                </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg p-6 transform hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
+                <span class="text-green-500 text-4xl mb-4 block">&#x1F3E2;</span>
+                <h4 class="text-xl font-bold text-white mb-2">Unlock Regional Opportunities</h4>
+                <p class="text-gray-300">
+                    Position yourself at the heart of Machakos County’s vibrant business ecosystem.
+                </p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg p-6 transform hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
+                <span class="text-yellow-500 text-4xl mb-4 block">&#x2728;</span>
+                <h4 class="text-xl font-bold text-white mb-2">Leave a Lasting Legacy</h4>
+                <p class="text-gray-300">
+                    Collaborate on impactful initiatives that drive regional development and social change.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-12 bg-gray-500 text-white">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-stretch gap-8">
+    <!-- Left: Image -->
+    <div class="w-full lg:w-1/2 bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg p-6 transform hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out flex justify-center">
+      <img src="{{ url_for('static', filename='images/nickimage.jpg') }}" alt="Nick Smith" 
+           class="w-[300px] h-[300px] rounded-lg shadow-lg transform hover:scale-105 transition duration-300 object-cover">
+    </div>
+
+    <!-- Right: Text -->
+    <div class="w-full lg:w-1/2 px-6 flex items-center">
+      <div class="bg-white p-8 rounded-lg shadow-lg text-black transform transition duration-300 hover:shadow-2xl hover:scale-105">
+        <h3 class="text-2xl font-extrabold mb-6">
+          <i class="fas fa-user-tie mr-2 text-yellow-400"></i> Meet Our Founding President
+        </h3>
+        <p class="leading-relaxed mb-6">
+          Nick Smith is a dynamic business strategist and transformational leader with a proven track record of building thriving enterprises and empowering others to succeed. As the founding president of the Machakos CEO's Networking Forum, Nick combines his sharp acumen and deep passion for leadership to create a vibrant platform for innovation, collaboration, and growth. Through his visionary approach, Nick has cultivated a space where business leaders thrive, innovate, and forge impactful connections.
+        </p>
+        <button class="px-8 py-3 bg-black text-white font-bold rounded-md transform hover:scale-110 hover:bg-[#49a09d] transition duration-300">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="py-12 bg-black bg-opacity-70">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-2xl md:text-2xl font-extrabold text-center text-white mb-10">How It Works</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+                    <!-- Card 1 -->
+                    <div class="bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg p-6 text-center transform hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
+                        <h4 class="text-2xl font-bold text-white mb-4">Exclusive Events</h4>
+                        <p class="text-gray-300">
+                            Participate in high-impact networking dinners, industry insight sessions, and leadership retreats tailored to CEOs and business leaders.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg p-6 text-center transform hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
+                        <h4 class="text-2xl font-bold text-white mb-4">Peer Collaboration</h4>
+                        <p class="text-gray-300">
+                            Exchange ideas, share challenges, and co-create solutions with like-minded leaders.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-gradient-to-b from-gray-800 to-black rounded-lg shadow-lg p-6 text-center transform hover:scale-105 hover:shadow-2xl transition duration-300 ease-in-out">
+                        <h4 class="text-2xl font-bold text-white mb-4">Membership Perks</h4>
+                        <p class="text-gray-300">
+                            Enjoy access to curated resources, discounts on partner services, and visibility through our digital platforms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 bg-black bg-opacity-70">
+          <div class="max-w-7xl mx-auto text-center px-6">
+            <h2 class="text-2xl md:text-2xl font-extrabold text-white">
+              <i class="fas fa-handshake mr-2 text-teal-400"></i> Join Us Today
+            </h2>
+            <p class="mt-4 text-lg md:text-xl text-gray-300">
+              Don’t just run your business—transform it. Become a part of the Machakos CEO's Networking Forum.
+            </p>
+            <div class="flex flex-wrap justify-center space-x-4 mt-8">
+              <a href="#" 
+                 class="px-6 py-3 bg-gradient-to-r from-black to-gray text-white font-bold rounded-md shadow-lg transform hover:scale-110 hover:shadow-2xl transition duration-300">
+                Apply Now
+              </a>
+            
+            </div>
+          </div>
+        </section>
+
+        <section class="py-12 bg-gradient-to-br from-gray-800 via-black to-teal-900 text-white" id="contact">
+          <div class="max-w-7xl mx-auto text-center px-6">
+            <h2 class="text-2xl md:text-2xl font-bold mb-6 text-teal-400">
+              <i class="fas fa-envelope mr-2 text-gold-500"></i> Contact Us
+            </h2>
+            <p class="text-lg mb-8 text-gray-300">
+              We’d love to hear from you. Whether you have questions or just want to connect, reach out to us!
+            </p>
+           <form class="max-w-3xl mx-auto space-y-6">
+  <div>
+    <label for="name" class="block text-lg font-bold text-gray-200 text-left">Your Name</label>
+    <input type="text" id="name" name="name" 
+           class="w-full mt-2 p-3 rounded-md bg-gray-900 text-white border border-gray-700 focus:border-teal-500 focus:ring-2 focus:ring-teal-500 transition duration-300" 
+           placeholder="Enter your name" required>
+  </div>
+  <div>
+    <label for="email" class="block text-lg font-bold text-gray-200 text-left">Your Email</label>
+    <input type="email" id="email" name="email" 
+           class="w-full mt-2 p-3 rounded-md bg-gray-900 text-white border border-gray-700 focus:border-teal-500 focus:ring-2 focus:ring-teal-500 transition duration-300" 
+           placeholder="Enter your email" required>
+  </div>
+  <div>
+    <label for="message" class="block text-lg font-bold text-gray-200 text-left">Your Message</label>
+    <textarea id="message" name="message" rows="5" 
+              class="w-full mt-2 p-3 rounded-md bg-gray-900 text-white border border-gray-700 focus:border-teal-500 focus:ring-2 focus:ring-teal-500 transition duration-300" 
+              placeholder="Enter your message" required></textarea>
+  </div>
+  <button type="submit" 
+          class="px-6 py-3 bg-gradient-to-r from-teal-600 to-teal-800 text-white font-bold rounded-md shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300">
+    Send Message
+  </button>
+</form>
+
+          </div>
+        </section>
+
+
+    </main>
+
+    <footer class="text-center py-4 border-t border-white mt-8" style="background: linear-gradient(90deg, #0A1B22, #153845);">
+        
+        <p class="text-1xl md:text-1xl font-bold animate-pulse text-white">Powered by <span class="font-bold text-teal-400">Xhale Africa</span></p>
+    </footer>
+
+</body>
+</html>

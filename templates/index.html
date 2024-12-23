@@ -1,0 +1,502 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="px-4 py-6 space-y-6">
+
+    <style>
+        .perspective {
+          perspective: 1000px;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        .group-hover\:rotate-y-180:hover .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      </style>
+
+    <!-- Page Title -->
+    <div class="relative text-center">
+        <!-- Background Image Container -->
+        <div class="absolute inset-0 bg-cover bg-center rounded-lg opacity-70" 
+             style="background-image: url('{{ url_for('static', filename='images/meg2.webp') }}'); height: 500px; width: 100%;">
+        </div>
+
+        <!-- Text and Button on top of the background image -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-[500px]">
+            <h2 class="text-xl sm:text-3xl mt-2 text-white font-bold text-shadow-lg transition duration-300 transform hover:scale-110" style="text-shadow: 0 0 10px black, 0 0 20px red;">
+    Xhale Africa Limited is a strategic communication firm.
+</h2>
+
+
+            <!-- Get Started Button -->
+            <a href="#brands" class="mt-8 inline-block px-6 py-3 text-lg font-semibold text-white bg-[#D2232A] rounded-full hover:bg-[#003B5C] transition duration-300 transform hover:scale-105">
+                Get Started
+            </a>
+        </div>
+    </div>
+    <div class="text-center text-2xl sm:text-3xl md:text-4xl mt-16 font-bold text-gray-800 md:text-5xl">
+  <h2 class="underline">OUR BRANDS</h2>
+</div>
+
+  
+   <section
+  class="flex justify-center items-center min-h-screen bg-gradient-to-r from-white to-[#003B5C] px-4 md:px-6 lg:px-10"
+  id="brands">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-screen-xl">
+    <!-- Card 1 -->
+    <div class="group perspective">
+      <div class="relative w-full max-w-[320px] sm:max-w-[350px] md:max-w-[400px] h-[450px] sm:h-[500px] md:h-[600px] bg-white shadow-lg rounded-lg transform transition-all duration-500 group-hover:rotate-y-180">
+        <!-- Front Side -->
+        <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-start p-4 bg-gray-100 rounded-lg">
+  <h2 class="text-xl sm:text-lg md:text-xl font-bold text-gray-800 absolute top-5">XHALE TRAVEL</h2>
+  <img src="{{ url_for('static', filename='images/wild2.jpg') }}" alt="Card 1 Image" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover mt-16">
+  <ul class="text-center space-y-2 mt-4 text-sm sm:text-base md:text-lg">
+    <li>🌍 Explore Exotic Destinations</li>
+    <li>✈️ Affordable Travel Packages</li>
+    <li>🏨 Budget Accommodation</li>
+    <li>🛎️ 24/7 Travel Assistance</li>
+  </ul>
+  <a href="https://www.xhaletravel.co.ke/" target="_blank" class="mt-6 px-6 py-2 bg-red-500 text-gray-800 font-bold rounded-lg hover:bg-white transition-all text-sm sm:text-base">
+    Learn More
+  </a>
+</div>
+
+        <!-- Back Side -->
+        <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center bg-gray-800 text-white p-4 rounded-lg">
+          <img src="{{ url_for('static', filename='images/travel1.jpg') }}" alt="Card 1 Back Image" class="w-full h-[200px] md:h-[300px] object-cover">
+          <h2 class="text-xl md:text-2xl font-semibold mt-4 text-center">XHALE TRAVEL</h2>
+          <p class="text-center mt-2">Explore the world with us.</p>
+          <button class="mt-6 px-6 py-2 bg-red-500 text-gray-800 font-bold rounded-lg hover:bg-white transition-all">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="group perspective">
+      <div class="relative w-full max-w-[320px] sm:max-w-[350px] md:max-w-[400px] h-[450px] sm:h-[500px] md:h-[600px] bg-white shadow-lg rounded-lg transform transition-all duration-500 group-hover:rotate-y-180">
+        <!-- Front Side -->
+        <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-start p-4 bg-gray-100 rounded-lg">
+  <h2 class="text-xl sm:text-lg md:text-2xl font-bold text-gray-800 absolute top-5">VOGUE BEAUTY</h2>
+  <img src="{{ url_for('static', filename='images/vogue2.jpg') }}" alt="Card 2 Image" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover mt-16">
+  <ul class="text-center space-y-2 mt-4 text-sm sm:text-base md:text-lg">
+    <li>🌿 Natural and Organic Skincare</li>
+    <li>🛍️ Exclusive Beauty Deals</li>
+  </ul>
+  <a href="https://www.xhaletravel.co.ke/" target="_blank" class="mt-6 px-6 py-2 bg-red-500 text-gray-800 font-bold rounded-lg hover:bg-white transition-all text-sm sm:text-base">
+    Learn More
+  </a>
+</div>
+
+        <!-- Back Side -->
+        <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center bg-gray-800 text-white p-4 rounded-lg">
+          <img src="{{ url_for('static', filename='images/vogue1.jpg') }}" alt="Card 2 Back Image" class="w-full h-[200px] md:h-[300px] object-cover">
+          <h2 class="text-xl md:text-2xl font-semibold mt-4 text-center">VOGUE BEAUTY</h2>
+          <p class="text-center mt-2">Embrace your Beauty's Power.</p>
+          <button class="mt-6 px-6 py-2 bg-red-500 text-gray-800 font-bold rounded-lg hover:bg-white transition-all">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group perspective">
+      <div class="relative w-full max-w-[320px] sm:max-w-[350px] md:max-w-[400px] h-[450px] sm:h-[500px] md:h-[600px] bg-white shadow-lg rounded-lg transform transition-all duration-500 group-hover:rotate-y-180">
+        <!-- Front Side -->
+        <div class="absolute inset-0 backface-hidden flex flex-col items-center justify-start p-4 bg-gray-100 rounded-lg">
+  <h2 class="text-xl sm:text-lg md:text-2xl font-bold text-gray-800 absolute top-5">AKTIVE CITIZEN</h2>
+  <img src="{{ url_for('static', filename='images/blog2.jpg') }}" alt="Card 3 Image" class="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover mt-16">
+  <ul class="text-center space-y-2 mt-4 text-sm sm:text-base md:text-lg">
+    <li>📰 Breaking News Updates</li>
+    <li>🌍 Global and Local Coverage</li>
+    <li>🎥 Live Reports and Videos</li>
+    <li>🛎️ 24/7 News Alerts</li>
+  </ul>
+  <a href="https://www.aktivecitizen.com/" target="_blank" class="mt-6 px-6 py-2 bg-red-500 text-gray-800 font-bold rounded-lg hover:bg-white transition-all text-sm sm:text-base">
+    Learn More
+  </a>
+</div>
+
+        <!-- Back Side -->
+        <div class="absolute inset-0 backface-hidden rotate-y-180 flex flex-col items-center justify-center bg-gray-800 text-white p-4 rounded-lg">
+          <img src="{{ url_for('static', filename='images/blog1.jpg') }}" alt="Card 3 Back Image" class="w-full h-[200px] md:h-[300px] object-cover">
+          <h2 class="text-xl md:text-2xl font-semibold mt-4 text-center">AKTIVE CITIZEN</h2>
+          <p class="text-center mt-2">Stay informed with the latest news.</p>
+          <button class="mt-6 px-6 py-2 bg-red-500 text-gray-800 font-bold rounded-lg hover:bg-white transition-all">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- About Us Section -->
+<section 
+    class="relative bg-gradient-to-r from-white to-[#003B5C] py-16" 
+    id="about-us"
+    style="background-image: url('{{ url_for('static', filename='images/aboutbg.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+  
+  <!-- Background Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+  
+  <!-- Content -->
+  <div class="relative z-10 container mx-auto px-4">
+      <!-- Text Content -->
+      <div class="text-content text-center mb-12">
+          <h2 
+              class="text-4xl font-bold text-white mb-4 hover:text-red-600 transition duration-300"
+              style="text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(255, 255, 255, 0.9);">
+              About Us
+          </h2>
+          <p 
+              class="text-lg text-gray-200 leading-relaxed hover:text-red-500 transition duration-300"
+              style="text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.8);">
+              Welcome to <strong class="font-semibold text-white hover:text-red-500 transition duration-300">Xhale Africa</strong>, where we create innovative strategies to enhance communication and empower brands. 
+              Our mission is to bridge the gap between businesses and their audiences with precision and impact. 
+              From strategic campaigns to digital marketing solutions, we deliver results that elevate your brand in the competitive market.
+          </p>
+      </div>
+      <!-- Features Section -->
+      <div class="features grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="feature bg-white shadow-lg rounded-lg p-6 text-center hover:bg-red-100 transition duration-300">
+              <div class="icon text-red-500 text-5xl mb-4 hover:text-black transition duration-300">
+                  <i class="fas fa-bullhorn"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-2 hover:text-red-500 transition duration-300">Strategic Communication</h3>
+              <p class="text-gray-600 hover:text-black transition duration-300">Delivering impactful messaging tailored to your audience.</p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="feature bg-white shadow-lg rounded-lg p-6 text-center hover:bg-red-100 transition duration-300">
+              <div class="icon text-red-500 text-5xl mb-4 hover:text-black transition duration-300">
+                  <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-2 hover:text-red-500 transition duration-300">Marketing Solutions</h3>
+              <p class="text-gray-600 hover:text-black transition duration-300">Custom campaigns that drive engagement and results.</p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="feature bg-white shadow-lg rounded-lg p-6 text-center hover:bg-red-100 transition duration-300">
+              <div class="icon text-red-500 text-5xl mb-4 hover:text-black transition duration-300">
+                  <i class="fas fa-handshake"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-2 hover:text-red-500 transition duration-300">Client Partnership</h3>
+              <p class="text-gray-600 hover:text-black transition duration-300">Collaborative approach to ensure mutual success.</p>
+          </div>
+          <!-- Feature 4 -->
+          <div class="feature bg-white shadow-lg rounded-lg p-6 text-center hover:bg-red-100 transition duration-300">
+              <div class="icon text-red-500 text-5xl mb-4 hover:text-black transition duration-300">
+                  <i class="fas fa-lightbulb"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-2 hover:text-red-500 transition duration-300">Innovative Solutions</h3>
+              <p class="text-gray-600 hover:text-black transition duration-300">Cutting-edge ideas that drive business transformation.</p>
+          </div>
+          <!-- Feature 5 -->
+          <div class="feature bg-white shadow-lg rounded-lg p-6 text-center hover:bg-red-100 transition duration-300">
+              <div class="icon text-red-500 text-5xl mb-4 hover:text-black transition duration-300">
+                  <i class="fas fa-users"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-2 hover:text-red-500 transition duration-300">Team Expertise</h3>
+              <p class="text-gray-600 hover:text-black transition duration-300">Highly skilled professionals committed to your success.</p>
+          </div>
+          <!-- Feature 6 -->
+          <div class="feature bg-white shadow-lg rounded-lg p-6 text-center hover:bg-red-100 transition duration-300">
+              <div class="icon text-red-500 text-5xl mb-4 hover:text-black transition duration-300">
+                  <i class="fas fa-cogs"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-2 hover:text-red-500 transition duration-300">Technology Integration</h3>
+              <p class="text-gray-600 hover:text-black transition duration-300">Seamless tech solutions for enhanced business operations.</p>
+          </div>
+          <!-- Feature 7 -->
+          <div class="feature bg-white shadow-lg rounded-lg p-6 text-center hover:bg-red-100 transition duration-300">
+              <div class="icon text-red-500 text-5xl mb-4 hover:text-black transition duration-300">
+                  <i class="fas fa-chart-pie"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-2 hover:text-red-500 transition duration-300">Data Analytics</h3>
+              <p class="text-gray-600 hover:text-black transition duration-300">Actionable insights to guide decision-making and growth.</p>
+          </div>
+          <!-- Feature 8 -->
+          <div class="feature bg-white shadow-lg rounded-lg p-6 text-center hover:bg-red-100 transition duration-300">
+              <div class="icon text-red-500 text-5xl mb-4 hover:text-black transition duration-300">
+                  <i class="fas fa-leaf"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-2 hover:text-red-500 transition duration-300">Sustainable Practices</h3>
+              <p class="text-gray-600 hover:text-black transition duration-300">Eco-friendly solutions for a greener future.</p>
+          </div>
+          <!-- Feature 9 -->
+          <div class="feature bg-white shadow-lg rounded-lg p-6 text-center hover:bg-red-100 transition duration-300">
+              <div class="icon text-red-500 text-5xl mb-4 hover:text-black transition duration-300">
+                  <i class="fas fa-award"></i>
+              </div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-2 hover:text-red-500 transition duration-300">Award-Winning Services</h3>
+              <p class="text-gray-600 hover:text-black transition duration-300">Recognized excellence in innovation and performance.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section 
+    class="testimonials relative bg-gradient-to-r from-white to-[#003B5C] py-16" 
+    id="testimonials"
+    style="background-image: url('{{ url_for('static', filename='images/travel1.jpg') }}'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+    
+    <!-- Background Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 container mx-auto px-4 text-center">
+        <h2 
+            class="text-4xl font-bold text-white mb-12 hover:text-red-600 transition duration-300"
+            style="text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8), 0px 0px 10px rgba(255, 255, 255, 0.9);">
+            Testimonials
+        </h2>
+
+        <!-- Carousel Wrapper -->
+        <div class="overflow-hidden relative w-full">
+            <!-- Testimonials List -->
+            <div id="testimonialsCarousel" class="flex gap-4">
+                <!-- Testimonial 1 -->
+                <div class="testimonial bg-white shadow-lg rounded-lg p-6 flex-shrink-0 w-full md:w-1/3">
+                    <div class="flex flex-col items-center">
+                        <img src="{{ url_for('static', filename='images/testi1.jpg') }}" alt="Jane Doe" class="w-20 h-20 rounded-full shadow-md mb-4">
+                        <p class="text-gray-700 italic text-center">
+                            "Xhale Africa Limited transformed our marketing strategy, resulting in a 40% increase in engagement within just three months. Highly recommended!"
+                        </p>
+                        <h4 class="mt-4 font-semibold text-gray-800">- Jane Doe, CEO of Global Ventures</h4>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial bg-white shadow-lg rounded-lg p-6 flex-shrink-0 w-full md:w-1/3">
+                    <div class="flex flex-col items-center">
+                        <img src="{{ url_for('static', filename='images/testi2.jpg') }}" alt="John Smith" class="w-20 h-20 rounded-full shadow-md mb-4">
+                        <p class="text-gray-700 italic text-center">
+                            "Their team is professional and creative, always going the extra mile to deliver exceptional results. A game-changer for our brand."
+                        </p>
+                        <h4 class="mt-4 font-semibold text-gray-800">- John Smith, Marketing Director</h4>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial bg-white shadow-lg rounded-lg p-6 flex-shrink-0 w-full md:w-1/3">
+                    <div class="flex flex-col items-center">
+                        <img src="{{ url_for('static', filename='images/testi3.jpg') }}" alt="Lisa Johnson" class="w-20 h-20 rounded-full shadow-md mb-4">
+                        <p class="text-gray-700 italic text-center">
+                            "From start to finish, Xhale Africa Limited exceeded our expectations. Their strategies are both innovative and effective."
+                        </p>
+                        <h4 class="mt-4 font-semibold text-gray-800">- Lisa Johnson, Founder of Bright Futures</h4>
+                    </div>
+                </div>
+                <!-- Add more testimonials  (4 to 9) --> 
+ <!-- Testimonial 4 -->
+<div class="testimonial bg-white shadow-lg rounded-lg p-6 flex-shrink-0 w-full md:w-1/3">
+    <div class="flex flex-col items-center">
+        <img src="{{ url_for('static', filename='images/testi2.jpg') }}" alt="Chris Fox" class="w-20 h-20 rounded-full shadow-md mb-4">
+        <p class="text-gray-700 italic text-center">
+            "Xhale Africa Limited is the reason our business grew exponentially. Exceptional service!"
+        </p>
+        <h4 class="mt-4 font-semibold text-gray-800">- Chris Fox, Startup Owner</h4>
+    </div>
+</div>
+<!-- Testimonial 5 -->
+<div class="testimonial bg-white shadow-lg rounded-lg p-6 flex-shrink-0 w-full md:w-1/3">
+    <div class="flex flex-col items-center">
+        <img src="{{ url_for('static', filename='images/testi1.jpg') }}" alt="Alexandra King" class="w-20 h-20 rounded-full shadow-md mb-4">
+        <p class="text-gray-700 italic text-center">
+            "Their innovative solutions have been a game-changer for our operations."
+        </p>
+        <h4 class="mt-4 font-semibold text-gray-800">- Alexandra King, Product Manager</h4>
+    </div>
+</div>
+<!-- Testimonial 6 -->
+<div class="testimonial bg-white shadow-lg rounded-lg p-6 flex-shrink-0 w-full md:w-1/3">
+    <div class="flex flex-col items-center">
+        <img src="{{ url_for('static', filename='images/testi2.jpg') }}" alt="Michael Brown" class="w-20 h-20 rounded-full shadow-md mb-4">
+        <p class="text-gray-700 italic text-center">
+            "A truly professional team that brought our vision to life with exceptional creativity."
+        </p>
+        <h4 class="mt-4 font-semibold text-gray-800">- Michael Brown, Creative Director</h4>
+    </div>
+</div>
+<!-- Testimonial 7 -->
+<div class="testimonial bg-white shadow-lg rounded-lg p-6 flex-shrink-0 w-full md:w-1/3">
+    <div class="flex flex-col items-center">
+        <img src="{{ url_for('static', filename='images/testi3.jpg') }}" alt="Sarah Thompson" class="w-20 h-20 rounded-full shadow-md mb-4">
+        <p class="text-gray-700 italic text-center">
+            "Working with Xhale Africa Limited was a delightful experience. Highly recommend them!"
+        </p>
+        <h4 class="mt-4 font-semibold text-gray-800">- Sarah Thompson, Event Organizer</h4>
+    </div>
+</div>
+<!-- Testimonial 8 -->
+<div class="testimonial bg-white shadow-lg rounded-lg p-6 flex-shrink-0 w-full md:w-1/3">
+    <div class="flex flex-col items-center">
+        <img src="{{ url_for('static', filename='images/testi1.jpg') }}" alt="Daniel Green" class="w-20 h-20 rounded-full shadow-md mb-4">
+        <p class="text-gray-700 italic text-center">
+            "Their strategies helped us achieve our targets faster than we ever thought possible."
+        </p>
+        <h4 class="mt-4 font-semibold text-gray-800">- Daniel Green, Operations Manager</h4>
+    </div>
+</div>
+<!-- Testimonial 9 -->
+<div class="testimonial bg-white shadow-lg rounded-lg p-6 flex-shrink-0 w-full md:w-1/3">
+    <div class="flex flex-col items-center">
+        <img src="{{ url_for('static', filename='images/testi2.jpg') }}" alt="Emily White" class="w-20 h-20 rounded-full shadow-md mb-4">
+        <p class="text-gray-700 italic text-center">
+            "A transformative experience. Xhale Africa Limited truly understands what businesses need."
+        </p>
+        <h4 class="mt-4 font-semibold text-gray-800">- Emily White, Entrepreneur</h4>
+    </div>
+</div>
+
+  
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+  <!-- Contact Us Section -->
+  <section 
+      class="contact-us relative bg-gray-100 py-16" 
+      id="contact-us"
+      style="background-image: url('{{ url_for('static', filename='images/cont1.jpg') }}'); background-size: cover; background-attachment: fixed; background-position: center; background-repeat: no-repeat;">
+
+      <!-- Background Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 container mx-auto px-4">
+          <div class="text-center mb-12">
+              <h2 
+                  class="text-4xl font-bold text-white"
+                  style="text-shadow: 0 4px 6px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 255, 255, 0.8);">
+                  Contact Us
+              </h2>
+              <p 
+                  class="text-lg text-gray-200 mt-4"
+                  style="text-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);">
+                  We’d love to hear from you! Reach out to discuss your project or ask any questions.
+              </p>
+          </div>
+          <div class="flex flex-col md:flex-row justify-center gap-8">
+              <!-- Contact Form -->
+              <form action="#" method="POST" class="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/2">
+                  <div class="mb-4">
+                      <label for="name" class="block text-gray-700 font-semibold">Name</label>
+                      <input 
+                          type="text" 
+                          id="name" 
+                          name="name" 
+                          class="w-full border-black border rounded-lg p-2" 
+                          required>
+                  </div>
+                  <div class="mb-4">
+                      <label for="email" class="block text-gray-700 font-semibold">Email</label>
+                      <input 
+                          type="email" 
+                          id="email" 
+                          name="email" 
+                          class="w-full border-black border rounded-lg p-2" 
+                          required>
+                  </div>
+                  <div class="mb-4">
+                      <label for="message" class="block text-gray-700 font-semibold">Message</label>
+                      <textarea 
+                          id="message" 
+                          name="message" 
+                          rows="4" 
+                          class="w-full border-black border rounded-lg p-2" 
+                          required>
+                      </textarea>
+                  </div>
+                  <button 
+                      type="submit" 
+                      class="px-6 py-2 bg-red-600 text-white font-semibold rounded-lg hover:bg-black transition">
+                      Send Message
+                  </button>
+              </form>
+
+              <!-- Contact Info -->
+              <div class="flex flex-col justify-center text-center md:text-left md:w-1/2">
+                  <h3 
+                      class="text-2xl font-bold text-white"
+                      style="text-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);">
+                      Get in Touch
+                  </h3>
+                  <p 
+                      class="text-gray-200 mt-4"
+                      style="text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);">
+                      <strong>Email:</strong> mail@xhaleafrica.com<br>
+                      <strong>Phone:</strong> +254 722 755 223<br>
+                      <strong>Location:</strong> Nairobi, Kenya
+                  </p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <!-- Social Media Section -->
+  <section class="social-media bg-gradient-to-r from-white to-[#003B5C] py-12">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">Connect with Us</h2>
+      <p class="text-lg font-bold text-gray-200 mb-8" style="text-shadow: 0 0 10px black; text-glow: 0 0 10px #FFFFFF;">
+        Follow us on our social media channels for updates, news, and more!
+      </p>
+      <div class="flex justify-center space-x-6">
+        <!-- Facebook -->
+        <a 
+          href="https://facebook.com" 
+          class="text-white text-3xl hover:text-blue-400 transition"
+          aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Twitter -->
+        <a 
+          href="https://twitter.com" 
+          class="text-white text-3xl hover:text-blue-300 transition"
+          aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Instagram -->
+        <a 
+          href="https://instagram.com" 
+          class="text-white text-3xl hover:text-pink-400 transition"
+          aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- LinkedIn -->
+        <a 
+          href="https://linkedin.com" 
+          class="text-white text-3xl hover:text-blue-500 transition"
+          aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <!-- YouTube -->
+        <a 
+          href="https://youtube.com" 
+          class="text-white text-3xl hover:text-red-500 transition"
+          aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+      #testimonialsCarousel {
+          transition: transform 1s ease-in-out;
+      }
+  </style>
+
+
+  <!-- JavaScript for Carousel -->
+     
+</div>
+{% endblock %}

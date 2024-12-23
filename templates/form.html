@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-start min-h-screen py-6">
+
+    <header class="text-center py-2 w-full opacity-90" style="background: linear-gradient(90deg, #0A1B22, #153845); height: 150px;">
+        <img src="{{ url_for('static', filename='images/ceologo.png') }}" alt="Forum Logo" class="mx-auto transition-transform transform hover:scale-110" style="width: 150px; height: 150px;">
+    </header>
+
+
+    <div class="bg-white rounded-lg shadow-lg w-96 p-6">
+        <form class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-xl font-bold mb-4 text-black">Application Form</h2>
+
+            <!-- Personal Information -->
+            <div class="mb-5">
+                <label for="fullName" class="block mb-2 text-sm font-medium text-gray-900">Full Name</label>
+                <input type="text" id="fullName" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="John Doe" required />
+            </div>
+
+            <div class="mb-5">
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email Address</label>
+                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="john.doe@example.com" required />
+            </div>
+
+            <div class="mb-5">
+                <label for="phone" class="block mb-2 text-sm font-medium text-gray-900">Phone Number</label>
+                <input type="tel" id="phone" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="e.g., +254700123456" required />
+            </div>
+
+            <!-- Professional Information -->
+            <div class="mb-5">
+                <label for="companyName" class="block mb-2 text-sm font-medium text-gray-900">Company/Organization Name</label>
+                <input type="text" id="companyName" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Your Company Ltd." required />
+            </div>
+
+            <div class="mb-5">
+                <label for="currentPosition" class="block mb-2 text-sm font-medium text-gray-900">Current Position</label>
+                <input type="text" id="currentPosition" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="e.g., Chief Executive Officer" required />
+            </div>
+
+            <div class="mb-5">
+                <label for="yearsExperience" class="block mb-2 text-sm font-medium text-gray-900">Years of Experience</label>
+                <input type="number" id="yearsExperience" min="0" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="e.g., 10" required />
+            </div>
+
+            <!-- Location -->
+            <div class="mb-5">
+                <label for="location" class="block mb-2 text-sm font-medium text-gray-900">Location (City/Town)</label>
+                <input type="text" id="location" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="e.g., Nairobi" required />
+            </div>
+
+            <!-- Business Sector -->
+            <div class="mb-5">
+                <label for="sector" class="block mb-2 text-sm font-medium text-gray-900">Business Sector</label>
+                <select id="sector" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
+                    <option value="" disabled selected>Select your sector</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Manufacturing">Manufacturing</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="mb-5">
+                <label for="goals" class="block mb-2 text-sm font-medium text-gray-900">What are your business goals?</label>
+                <textarea id="goals" rows="4" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="e.g., Expand operations, network with other CEOs, etc." required></textarea>
+            </div>
+
+            <div class="flex items-start mb-5">
+                <div class="flex items-center h-5">
+                    <input id="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required />
+                </div>
+                <label for="terms" class="ms-2 text-sm font-medium text-gray-900">I agree to the <a href="#" class="text-blue-600 hover:underline">terms and conditions</a></label>
+            </div>
+
+            <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                Submit Your Information
+            </button>
+        </form>
+    </div>
+</body>
+</html>

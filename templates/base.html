@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xhale Africa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body class="text-black">
+    <!-- Header with Gradient Background -->
+    <header class="fixed top-0 left-0 w-full bg-gradient-to-r from-white to-[#003B5C] py-4 shadow-md relative">
+        <div class="container mx-auto flex items-center justify-between px-4">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="/">
+                    <img src="{{ url_for('static', filename='images/Web_Xhale_Africa_Logo-removebg-preview.png') }}" 
+                         alt="Xhale Africa Logo" 
+                         class="h-14 max-w-full md:w-28 md:h-16">
+                </a>
+            </div>
+            <!-- Hamburger Menu -->
+            <div class="block md:hidden">
+                <button id="navToggle" class="text-[#D2232A] focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6 text-lg">
+                <a href="/" class="text-white hover:text-[#D2232A] transition-transform transform hover:scale-110">Home</a>
+                <div class="relative group">
+                    <button id="brandsToggle" 
+                            class="text-white hover:text-[#D2232A] transition-transform transform hover:scale-110 focus:outline-none">
+                        Our Brands
+                    </button>
+                    <div id="brandsDropdown" 
+                         class="absolute hidden group-hover:block bg-white shadow-md text-black rounded-md mt-1 w-40 z-20">
+                        
+                        <a href="https://www.xhaletravel.co.ke/" target="_blank" class="block px-4 py-2 hover:bg-[#003B5C] hover:text-white">XHALE TRAVEL</a>
+                        <a href="#" class="block px-4 py-2 hover:bg-[#003B5C] hover:text-white">VOGUE BEAUTY</a>
+                        <a href="https://www.aktivecitizen.com/" target="_blank" class="block px-4 py-2 hover:bg-[#003B5C] hover:text-white">AKTIVE CITIZEN</a>
+                    </div>
+                </div>
+                   <a href="/ceoforum" target="_blank" class="text-white hover:text-[#D2232A] transition-transform transform hover:scale-110">CEO's Forum</a>
+                <a href="#contact-us" class="text-white hover:text-[#D2232A] transition-transform transform hover:scale-110">Contact Us</a>
+            </nav>
+        </div>
+        <!-- Overlay Navigation for Mobile -->
+        <div id="navOverlay" 
+             class="fixed hidden z-40 bg-[#003B5C] bg-opacity-90 top-1/9 left-1/2 w-1/2 h-1/2 flex flex-col justify-evenly items-center text-white rounded-lg shadow-lg">
+            <!-- Cancel Icon -->
+            <button id="cancelOverlay" class="absolute top-2 left-2 text-white focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <a href="/" class="text-lg hover:text-[#D2232A]">Home</a>
+            <div class="relative">
+                <button id="mobileBrandsToggle" class="text-lg hover:text-[#D2232A] focus:outline-none">Our Brands</button>
+                <div id="mobileBrandsDropdown" 
+                     class="hidden bg-white text-black rounded-md w-40 p-2 mt-2">
+                    
+                    <a href="https://www.xhaletravel.co.ke/" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 hover:bg-[#003B5C] hover:text-white">XHALE TRAVEL</a>
+<a href="https://www.aktivecitizen.com/" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 hover:bg-[#003B5C] hover:text-white">VOGUE BEAUTY</a>
+<a href="https://www.aktivecitizen.com/" target="_blank" rel="noopener noreferrer" class="block px-4 py-2 hover:bg-[#003B5C] hover:text-white">ACTIVE CITIZEN</a>
+
+                </div>
+            </div>
+              <a href="/ceoforum" target="_blank" class="text-white hover:text-[#D2232A] transition-transform transform hover:scale-110">CEO's Forum</a>
+            <a href="#contact-us" class="text-lg hover:text-[#D2232A]">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 bg-[#F1F1F1] px-4">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-[#003B5C] to-white py-6 border-t border-[#C0C0C0]">
+        <div class="container mx-auto text-center">
+            <p class="text-white">&copy; 2024 Xhale Africa. All Rights Reserved.</p>
+            <p class="mt-2">
+                <a href="#" class="text-[#D2232A] hover:text-[#FFC107]">Privacy Policy</a> | 
+                <a href="#" class="text-[#D2232A] hover:text-[#FFC107]">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Hamburger menu and overlay toggle
+        const navToggle = document.getElementById('navToggle');
+        const navOverlay = document.getElementById('navOverlay');
+        const cancelOverlay = document.getElementById('cancelOverlay');
+
+        navToggle.addEventListener('click', () => {
+            navOverlay.classList.remove('hidden'); // Show overlay
+            navOverlay.classList.add('flex');     // Ensure flex layout
+        });
+
+        cancelOverlay.addEventListener('click', () => {
+            navOverlay.classList.add('hidden');  // Hide overlay
+            navOverlay.classList.remove('flex');
+        });
+
+        // Desktop "Our Brands" dropdown
+        const brandsToggle = document.getElementById('brandsToggle');
+        const brandsDropdown = document.getElementById('brandsDropdown');
+
+        brandsToggle?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            brandsDropdown?.classList.toggle('hidden'); // Toggle visibility
+        });
+
+        document.addEventListener('click', (e) => {
+            if (brandsDropdown && !brandsDropdown.contains(e.target) && !brandsToggle.contains(e.target)) {
+                brandsDropdown.classList.add('hidden'); // Close dropdown
+            }
+        });
+
+        // Mobile "Our Brands" dropdown
+        const mobileBrandsToggle = document.getElementById('mobileBrandsToggle');
+        const mobileBrandsDropdown = document.getElementById('mobileBrandsDropdown');
+
+        mobileBrandsToggle?.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileBrandsDropdown?.classList.toggle('hidden'); // Toggle dropdown visibility
+        });
+
+        // Prevent layout disruption in overlay
+        navOverlay.addEventListener('click', (e) => {
+            const clickedInsideDropdown = e.target.closest('#mobileBrandsDropdown') || e.target.closest('#mobileBrandsToggle');
+            if (mobileBrandsDropdown && !clickedInsideDropdown) {
+                mobileBrandsDropdown.classList.add('hidden'); // Close dropdown only if clicked outside
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
